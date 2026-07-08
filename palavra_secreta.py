@@ -1,8 +1,10 @@
 #Jogo da palavra secreta#
+import os
 palavra_secreta = 'Flora'
 letras_acertadas = ''
 numero_tentativas = 0
 while True:
+  
     letra_digitada = input("Digite uma letra: ")
     numero_tentativas += 1
     if len(letra_digitada) > 1:
@@ -23,6 +25,9 @@ while True:
     print('palavra formada:', palavra_formada)
 
     if palavra_formada == palavra_secreta:
-            print("VOCE GANHOU!!")
+            os.system('cls')
+            print("VOCÊ GANHOU!!")
             print("A palavra era", palavra_formada)
-            print("Tentativas:", numero_tentativas)
+            print("Tentativas:", numero_tentativas)    
+            letras_acertadas = ''
+            numero_tentativas = 0
